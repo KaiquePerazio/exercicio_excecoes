@@ -26,10 +26,11 @@ public class Program {
 		
 		Account ac = new Account(number, holder, balance, withdrawLimit);
 		
-		try {
-			System.out.println();
-			System.out.print("Enter amount for withdraw: ");
-			double amount = sc.nextDouble();
+		System.out.println();
+		System.out.print("Enter amount for withdraw: ");
+		double amount = sc.nextDouble();
+		
+		try {			
 			ac.withdraw(amount);
 			System.out.println("New balance: " + String.format("%.2f", ac.getBalance()));
 		} catch (DomainException e) {
